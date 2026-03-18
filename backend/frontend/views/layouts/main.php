@@ -35,11 +35,13 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
+        ['label' => 'Navbar', 'url' => ['/navbar']],
+        ['label' => 'Header', 'url' => ['/header']],
+        ['label' => 'Blok2', 'url' => ['/blok2']],
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'About', 'url' => ['/site/about']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
-        ['label' => 'Navbar', 'url' => ['/navbar']],
-        ['label' => 'Header', 'url' => ['/header']],
+
 
     ];
     if (Yii::$app->user->isGuest) {
