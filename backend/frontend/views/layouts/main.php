@@ -35,17 +35,21 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
+        ['label' => 'News', 'url' => ['/news']],
         ['label' => 'Navbar', 'url' => ['/navbar']],
         ['label' => 'Header', 'url' => ['/header']],
+        ['label' => 'Tugmalar', 'url' => ['/tugmalar']],
         ['label' => 'Blok2', 'url' => ['/blok2']],
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => 'Menyular', 'url' => ['/menyular']],
+        ['label' => 'Customer', 'url' => ['/customer']],
+        // ['label' => 'Home', 'url' => ['/site/index']],
+        // ['label' => 'About', 'url' => ['/site/about']],
+        // ['label' => 'Contact', 'url' => ['/site/contact']],
 
 
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
+        // $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
     }
 
     echo Nav::widget([
