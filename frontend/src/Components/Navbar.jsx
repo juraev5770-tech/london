@@ -18,26 +18,28 @@ const Navbar = () => {
   console.log(navbar);
   
 
-  return (
-    <div className='bg-[#0C0C0C] py-[25px] flex justify-around items-center'>
+return (
+  <div className="bg-[#0C0C0C] py-[25px] w-full border-b border-white/5">
+    {/* KONTEYNER QO'SHILDI: Bu elementlarni o'rtada ushlaydi */}
+    <div className="max-w-[1200px] mx-auto px-10 flex justify-between items-center">
       <Link to="/">
-        <img src={logo} alt="" />
+        <img src={logo} alt="logo" className="w-40" />
       </Link>
 
-      <div className='flex justify-center items-center gap-10 flex-wrap'>
-        {
-          navbar && navbar.map((value, index) => {
-            return (
-              <Link className='text-white' to={value.url}>{value.title}</Link>
-            )
-          })
-        }
-
-        <button className='border-2 border-white text-white font medium py-2 px-8 rounded-full bg-transparent hover:bg-white hover:text-red-600 transition-colors duration-300'>Log In</button>
+      <div className="flex items-center gap-10">
+        {navbar && navbar.map((value, index) => (
+          <Link key={index} className="text-white hover:text-yellow-500 transition-colors" to={value.url}>
+            {value.title}
+          </Link>
+        ))}
       </div>
 
+      <button className="border-2 border-white text-white px-8 py-2 rounded-full font-bold hover:bg-white hover:text-black transition-all">
+        Log In
+      </button>
     </div>
-  )
+  </div>
+);
 }
 
 export default Navbar

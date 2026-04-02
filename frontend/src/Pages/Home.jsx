@@ -15,49 +15,49 @@ const Home = () => {
 
   console.log(home);
 return (
-  /* 1. Eng tashqi qism: Bu butun ekran bo'ylab rangni (bg) beradi */
-  <section className="w-full bg-[#0C0C0C] min-h-screen flex items-center overflow-hidden">
+  /* 1. min-h-screen o'rniga aniq balandlik beramiz, shunda zoomda osmon bo'lib ketmaydi */
+  <section className="w-full bg-[#0C0C0C] min-h-[700px] flex items-center justify-center py-20 overflow-hidden">
     
-    {/* 2. Konteyner: Bu ma'lumotlarni o'rtada va chegaralangan kenglikda ushlab turadi */}
-    <div className="max-w-[1300px] w-full mx-auto px-6 md:px-16 lg:px-24">
+    {/* 
+       2. ENG MUHIMI: max-w-[1200px] va justify-center. 
+       Bu matn va rasmni har doim bir-biriga yaqin ushlaydi.
+    */}
+    <div className="w-full max-w-[1200px] mx-auto px-10 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-32">
       
       {home && home.map((item, index) => (
-        <div key={index} className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-20">
+        <React.Fragment key={index}>
           
-          {/* Chap tomon: Matnlar qismi */}
-          <div className="w-full md:w-[55%] text-white space-y-6 z-10">
-            <h4 className="text-yellow-500 font-medium tracking-[0.4em] uppercase italic text-sm md:text-base">
-              Chase The New Flavour
+          {/* Chap tomon: Matn (Kengligi md:w-[450px] qilib qat'iy belgilandi) */}
+          <div className="w-full md:w-[450px] space-y-6 text-left shrink-0">
+            <h4 className="text-yellow-500 font-medium tracking-[0.3em] uppercase italic text-sm">
+              {item.little_title || "Chase The New Flavour"}
             </h4>
-            
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight">
+            <h1 className="text-white text-5xl md:text-7xl font-bold leading-[1.1]">
               {item.title}
             </h1>
-            
-            <p className="text-gray-400 text-lg md:text-xl max-w-lg leading-relaxed font-light">
+            <p className="text-gray-400 text-lg leading-relaxed font-light">
               {item.info}
             </p>
-
-            <div className="pt-8">
-              <button className="border-2 border-white px-12 py-3.5 rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all duration-300 transform active:scale-95 shadow-lg">
-                {item.button_text}
+            <div className="pt-4">
+              <button className="border-2 border-white text-white px-10 py-3 rounded-full font-bold hover:bg-white hover:text-black transition-all">
+                {item.button_text || "Explore Menu"}
               </button>
             </div>
           </div>
 
-          {/* O'ng tomon: Rasm qismi */}
-          <div className="w-full md:w-[45%] flex justify-center items-center relative">
-            {/* Orqa fondagi bezak aura - rasm ortida turadi */}
-            <div className="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-white/5 rounded-full blur-[100px] -z-10"></div>
+          {/* O'ng tomon: Rasm (Kengligi md:w-[500px] qilib qat'iy belgilandi) */}
+          <div className="w-full md:w-[500px] flex justify-center items-center relative shrink-0">
+            {/* Orqa fondagi effekt */}
+            <div className="absolute inset-0 bg-white/5 blur-[100px] rounded-full -z-10"></div>
             
             <img 
               src={item.img} 
               alt={item.title} 
-              className="w-full max-w-[450px] lg:max-w-[550px] h-auto object-contain drop-shadow-[0_35px_50px_rgba(0,0,0,0.6)] hover:rotate-2 transition-transform duration-700"
+              className="w-full h-auto object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-700"
             />
           </div>
 
-        </div>
+        </React.Fragment>
       ))}
       
     </div>
