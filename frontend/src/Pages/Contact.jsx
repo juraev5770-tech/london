@@ -18,10 +18,10 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
-          {/* CHAP TOMON: Aloqa ma'lumotlari (Dark Style) */}
+       
           <div className="space-y-12">
             <div className="space-y-10">
-              {/* Phone */}
+          
               <div className="flex items-center gap-8 group">
                 <div className="w-16 h-16 bg-[#161616] border border-yellow-500/20 rounded-2xl flex items-center justify-center text-yellow-500 text-2xl group-hover:bg-yellow-500 group-hover:text-black transition-all duration-500">
                   📞
@@ -32,7 +32,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Email */}
+              
               <div className="flex items-center gap-8 group">
                 <div className="w-16 h-16 bg-[#161616] border border-yellow-500/20 rounded-2xl flex items-center justify-center text-yellow-500 text-2xl group-hover:bg-yellow-500 group-hover:text-black transition-all duration-500">
                   ✉️
@@ -43,7 +43,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Socials */}
+           
               <div className="flex items-center gap-8 group">
                 <div className="w-16 h-16 bg-[#161616] border border-yellow-500/20 rounded-2xl flex items-center justify-center text-yellow-500 text-2xl group-hover:bg-yellow-500 group-hover:text-black transition-all duration-500">
                   🌐
@@ -59,9 +59,9 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* O'NG TOMON: Xabar yuborish formasi (Gold Inputs) */}
+         
           <div className="bg-[#161616] p-10 md:p-12 rounded-[45px] border border-white/5 shadow-2xl relative overflow-hidden">
-            {/* Bezak nuri */}
+            
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-yellow-500/5 rounded-full blur-3xl"></div>
             
             <h3 className="text-3xl font-bold mb-8 text-white">Send Message</h3>
@@ -102,11 +102,14 @@ const Contact = () => {
           <h3 className="text-3xl md:text-4xl font-bold text-white italic uppercase tracking-[0.3em]">Find Us By Map</h3>
           <div className="w-full h-[450px] rounded-[50px] overflow-hidden border border-white/5 shadow-2xl relative">
             <iframe 
-              src="https://google.com" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.448379595449!2d0.017694476501610663!3d51.48663887180854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a839030ef577%3A0x5fc2fd60774b5712!2sEaTurkish!5e0!3m2!1suz!2s!4v1775217066449!5m2!1suz!2s" 
               className="w-full h-full grayscale invert-[0.9] opacity-80 hover:opacity-100 hover:grayscale-0 transition-all duration-1000" 
               allowFullScreen="" 
               loading="lazy"
             ></iframe>
+
+            
+
           </div>
         </div>
 

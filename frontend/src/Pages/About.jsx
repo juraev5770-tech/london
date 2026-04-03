@@ -3,10 +3,10 @@ import React from 'react';
 const AboutUs = () => {
   return (
     <section className="bg-[#0C0C0C] py-24 px-6 md:px-24">
-      {/* Konteyner: Ma'lumotlarni o'rtada va chegaralangan kenglikda ushlaydi */}
+      
       <div className="max-w-[1000px] mx-auto text-center space-y-12">
         
-        {/* Sarlavha qismi */}
+       
         <div className="space-y-4">
           <h4 className="text-yellow-500 font-medium tracking-[0.4em] uppercase italic text-sm">
             History
@@ -17,7 +17,7 @@ const AboutUs = () => {
           <div className="w-20 h-1 bg-yellow-500 mx-auto rounded-full opacity-30"></div>
         </div>
 
-        {/* Matnlar qismi (Readability uchun max-w berildi) */}
+
         <div className="max-w-3xl mx-auto space-y-6">
           <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-light italic">
             "Bizning hikoyamiz an'anaviy turk lazzatlarini zamonaviy uslubda taqdim etishdan boshlangan. Har bir taomimizda sharqning mehmondo'stligi va eng sifatli masalliqlarning uyg'unligini his qilasiz."

@@ -20,7 +20,7 @@ const Navbar = () => {
 
 return (
   <div className="bg-[#0C0C0C] py-[25px] w-full border-b border-white/5">
-    {/* KONTEYNER QO'SHILDI: Bu elementlarni o'rtada ushlaydi */}
+  
     <div className="max-w-[1200px] mx-auto px-10 flex justify-between items-center">
       <Link to="/">
         <img src={logo} alt="logo" className="w-40" />

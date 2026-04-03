@@ -3,12 +3,10 @@ import axios from 'axios';
 
 const Blok2 = () => {
   const [blok2, setBlok2] = useState([]);
-  const manzil = "http://london.loc/backend/blok2"; // Backend manzilingiz
-
+  const manzil = "http://london.loc/backend/blok2"; 
   useEffect(() => {
     axios.get(manzil)
       .then(res => {
-        // Agar backend JSON qaytarsa:
         setBlok2(res.data);
       })
       .catch(err => console.log("Blok2 xatosi:", err));
@@ -18,7 +16,7 @@ const Blok2 = () => {
     <section className="bg-[#0C0C0C] py-20 px-6 md:px-24 text-white">
       <div className="container mx-auto">
         
-        {/* Sarlavha qismi (Figma uslubida) */}
+  
         <div className="text-center mb-16 space-y-4">
           <h4 className="text-yellow-500 font-medium tracking-[0.3em] uppercase italic">
             Popular Dishes
@@ -28,12 +26,12 @@ const Blok2 = () => {
           </h2>
         </div>
 
-        {/* Taomlar Grid - 4 talik qator */}
+       
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {blok2 && blok2.map((item, index) => (
             <div key={index} className="group bg-[#1A1A1A] p-6 rounded-3xl hover:bg-[#222] transition-all duration-500 transform hover:-translate-y-3 shadow-2xl">
               
-              {/* Taom rasmi (Bazadagi image_url ustunidan) */}
+             
               <div className="relative mb-6 overflow-hidden rounded-2xl aspect-square flex items-center justify-center bg-[#111]">
                 <img 
                   src={item.image_url} 
@@ -42,7 +40,7 @@ const Blok2 = () => {
                 />
               </div>
 
-              {/* Reyting (Bazadagi rating ustunidan) */}
+              
               <div className="flex items-center gap-1 mb-4 text-yellow-500 text-sm">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className={i < item.rating ? "opacity-100" : "opacity-20"}>
@@ -52,12 +50,11 @@ const Blok2 = () => {
                 <span className="text-gray-500 ml-2">({item.rating}.0)</span>
               </div>
 
-              {/* Taom nomi (Bazadagi description ustunidan) */}
               <h3 className="text-xl font-bold mb-4 line-clamp-2 h-14 group-hover:text-yellow-500 transition-colors">
                 {item.description}
               </h3>
 
-              {/* Narxi (Bazadagi price ustunidan) */}
+           
               <div className="flex items-center justify-between mt-auto border-t border-white/5 pt-5">
                 <span className="text-2xl font-extrabold text-yellow-500">
                   ${item.price}
@@ -71,7 +68,7 @@ const Blok2 = () => {
           ))}
         </div>
 
-        {/* Agar ma'lumot hali yuklanmagan bo'lsa */}
+
         {blok2.length === 0 && (
           <div className="text-center py-20">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-yellow-500 mx-auto"></div>

@@ -17,31 +17,30 @@ return (
         {menyular && menyular.map((item, index) => (
           <div key={index} className="group bg-[#161616] border border-white/5 rounded-3xl p-5 hover:bg-[#1c1c1c] transition-all duration-500 shadow-xl flex flex-col items-center">
             
-            {/* Rasm konteyneri - Hammasini bir xil o'lchamda qiladi */}
+          
             <div className="w-full h-56 relative mb-6 overflow-hidden rounded-2xl bg-[#0f0f0f] flex items-center justify-center">
               <img 
                 src={item.image} 
                 alt={item.description} 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              {/* Narxni rasm ustiga chiroyli qilib qo'yish (ixtiyoriy) */}
+            
               <div className="absolute top-3 right-3 bg-yellow-500 text-black font-bold px-3 py-1 rounded-full text-sm">
                 ${item.price}
               </div>
             </div>
 
-            {/* Matnlar qismi */}
+           
             <div className="text-center w-full space-y-3">
               <h3 className="text-white text-lg font-bold leading-snug h-14 line-clamp-2 group-hover:text-yellow-500 transition-colors">
                 {item.description}
               </h3>
               
-              {/* Reyting (Agar bazada bo'lmasa, shunchaki bezak uchun) */}
+    
               <div className="flex justify-center text-yellow-500 text-xs gap-1">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span className="opacity-30">★</span>
               </div>
 
-              {/* Pastki tugma */}
               <button className="w-full mt-4 py-2.5 bg-transparent border border-white/10 text-white rounded-xl hover:bg-white hover:text-black font-semibold transition-all text-sm uppercase tracking-wider">
                 Add to Cart
               </button>
